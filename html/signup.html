@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignUp</title>
+
+  <!--CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="signupstyle.css">
+
+  <!--font body-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Rashi+Hebrew:wght@500&display=swap" rel="stylesheet">   
+
+  <!--Navbar font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+
+  <!--font on slide h1-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+
+  <!--sign-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+
+</head>
+<body>
+
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light "style="background-color:#DEE8EB; max-width: 100%;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../Img/logo.jpg" alt="logo" style="margin-left: 10%;width: 230px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" style="width:160px; text-align: center;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  href="#" style="width:160px; text-align: center;">About&nbsp;Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  href="#" style="width:160px; text-align: center;">Found</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  href="#" style="width:160px; text-align: center;">Lost</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  href="#" style="width:160px; text-align: center;">Sign&nbsp;In</a>
+          </li>
+      </div>
+    </div>
+  </nav>
+  <!--End Navbar-->
+  <!--background-->
+  <div class="background-image">
+    <div class="card-group" style="padding-left: 100px;padding-right: 100px;margin-top: 5%; margin-bottom: 10%;" >
+      <div class="col-lg-5 col-md-12 mb-4 mb-md-0" style="height: 600px;border-radius: 10px;background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url('../Img/backpack.jpg');background-repeat: no-repeat;background-size:cover;">
+        <div class="card-body" style="text-align: center;margin-top: 30%;"> 
+          <h5 class="card-title" style="font-size: 35px;font-weight: bold;color: aliceblue;">Welcome</h5>
+          <p class="card-text" style="margin-top: 20px;color: aliceblue;font-weight: bold;">Please Log In with your Information</p>
+          <a href="#" class="btn " id="SignIn" style="background-color: rgb(243, 255, 7);border-radius: 20px;width: 150px;height: auto;font-size: 22px;text-align: center;font-weight: bold;">SIGN IN</a>
+          
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-12 mb-4 mb-md-0" style="height: 600px;background-color: rgb(219, 235, 226);border-radius: 10px;">
+        <div class="card-body" style="margin-top: 40px;text-align: center;">
+          <h5 class="card-title" style="font-size: 35px;font-weight: bold;color:#219882;margin-bottom: 5px;">Create Account</h5>
+          <a href="#" class="btn " id="SignOut" style="background-color: #ffffff;border-radius: 20px;width: 65%;text-align: center;font-size:20px;font-weight: bold;color: black;">Sign up with google account <img src="../Img/googleC.png"  alt=""></a>
+          <p class="card-text" style="font-weight: bold;">or use your email</p>
+          <form style="font-family: 'Noto Rashi Hebrew', serif;margin-left: 18%;">
+          <div class="mb-3"style="font-size: 20px;text-align:left;">
+            <label class="form-label" >Name</label>
+            <input type="name" class="form-control" id="name" style="background-color: rgba(92, 107, 111, 0.4);width: 80%;color:rgb(0, 0, 0);font-size:20px;" placeholder="Username">
+          </div>
+
+          <div class="mb-3"style="font-size: 20px;text-align:left;">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Example@gmail.com" aria-describedby="emailHelp"style="background-color: rgba(92, 107, 111, 0.4);;width: 80%;color:rgb(0, 0, 0);font-size:20px;">
+          </div>
+
+          <div class="mb-3"style="font-size: 20px;text-align:left;">
+            <label for="phonenumber" class="form-label">Password</label>
+            <input type="" class="form-control" id="typePassword"  placeholder="Password " style="background-color: rgba(92, 107, 111, 0.4);;width: 80%;color:rgb(0, 0, 0);font-size:20px;">
+          </div>
+
+        </form>
+        <a href="#" class="btn " id="SignOut" style="background-color: #219882;border-radius: 20px;width: 150px;text-align: center;height: auto;font-size: 22px;font-weight: bold;color: aliceblue;">SIGN UP</a>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end background-->
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+
+</html>

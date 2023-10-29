@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:  rgb(255, 255, 255);
+}
+
+/*nav style*/
+.navbar-brand{
+   width: 70%;
+   height: auto;
+   position: relative;
+   overflow: hidden;
+   margin-top: 0;
+   padding-top: 0;
+}
+
+/* text on navbar*/
+.collapse ul li a{
+    font-family: 'Sans', sans-serif;
+    color:  #219882 !important ;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 30px;
+    padding: 10px 12px;
+    border-radius: 6px;
+}
+
+.collapse ul li a:hover{
+   background-color: #219882;
+    color: rgb(255, 255, 255) !important; 
+}
+
+.navbar-toggler{
+    background-color: rgb(186, 186, 186);
+    font-size: 20px;
+}
+
+
+#btn1:hover{
+    background: rgb(183, 200, 210) !important;
+    color: #219882 !important;
+    
+}
+
+#btn2:hover{
+    background:#DEE8EB !important;
+    color: #219882 !important;
+    
+}
+/*End*/
+
+/*footer style*/
+.text{
+    text-align: right;
+    font-family: 'Almarai', sans-serif;
+    color: aliceblue;
+}
+
+.text1{
+    text-align: left; 
+    font-family: 'Almarai', sans-serif;
+    color: #219882;
+
+}
+
+.email{ 
+    text-align: left;
+    font-family: 'Almarai', sans-serif;
+    list-style: none;
+}
+.email a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+/*footer style*/
+#navFooter1:hover{
+    color:  #0dd0ac !important;
+}
+#navFooter2:hover{
+    color:  #0dd0ac !important;
+}
+#navFooter3:hover{
+    color:  #0dd0ac !important;
+}
+#navFooter4:hover{
+    color:  #0dd0ac !important;
+}
+/*End*/

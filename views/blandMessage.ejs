@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserAccount</title>
+  <!--CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style/UserAccounts.css">
+
+  <!--font body-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Rashi+Hebrew:wght@500&display=swap" rel="stylesheet">   
+
+  <!--Navbar font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+
+  <!--font on slide h1-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light "style="background-color:#DEE8EB;; max-width: 100%;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img src="../Img/logo.jpg" alt="logo" style="margin-left: 10%;width: 230px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active"  href="#" style="width:160px; text-align: center;">About&nbsp;Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  href="/foundItemPage" style="width:160px; text-align: center;">Found</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  href="/lostItemPage" style="width:160px; text-align: center;">Lost</a>
+        </li>
+        <% if (isAuth) { %>
+          <!-- Show the authenticated navigation item -->
+          <li class="nav-item">
+            <a class="nav-link active" href="/Profile" style="width: 160px; text-align: center;">
+              <span class="bi bi-person-fill" style="display: block; font-size: 1.5rem; margin: 0 auto;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" style="display: block; width: 42px; height: 42px; margin: 0 auto;">
+                  <path d="M248 288c61.9 0 112-50.1 112-112s-50.1-112-112-112-112 50.1-112 112 50.1 112 112 112zm0 32c-71.9 0-208 36.4-208 112v16h416v-16c0-75.6-136.1-112-208-112z" fill="#219882"/>
+                </svg>
+              </span>
+            </a>
+          </li>
+        <% } else { %>
+          <!-- Show the unauthenticated navigation item -->
+          <li class="nav-item">
+            <a class="nav-link active" href="/signInPage" style="width:160px; text-align: center;">Sign&nbsp;In</a>
+          </li>
+        <% } %>
+    </div>
+  </div>
+</nav>  
+<!--End Navbar-->
+
+  
+
+   <!--Item info-->
+
+   <div class="row " style="display: flex;max-width: 100%;" >
+    <div class="col-sm-3" style="background-color: #1A937E;">
+      <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto ">
+        <img src="../Img/profileNav.png" style="width: 60%; display: block;margin-left: auto;margin-right: auto;margin-top: 10%">
+      </div>
+      <div class="username fw-bold" style="text-align: center;color: aliceblue;font-size: 25px;margin-top: 10%;margin-bottom: 10%;">
+        <p><%= senderUsername %></p>
+      </div>
+      <div class="btn fw-bold" id="changename" style="display: block;margin-left: auto;text-align: left;margin-right: auto;font-size: 25px;width:80%;height: auto;background-color: aliceblue;color: rgb(6, 78, 54);margin-top: 10%;text-align: center;">
+        Change Username
+      </div>
+      <div class="btn fw-bold" id="changename" style="display: block;margin-left: auto;text-align: left;margin-right: auto;font-size: 25px;width:80%;height: auto;background-color: aliceblue;color: rgb(6, 78, 54);margin-top: 5%;margin-bottom: 10%;text-align: center;">
+        Log out
+      </div>
+    </div>
+
+    <div class="card col-sm-8 align-content-center m-3">
+      <h1 class="m-3"><%= receiverUsername %></h1>
+      <div class="chat-body d-flex flex-column" id="chat-messages" style="height: 300px; overflow-y: scroll;">
+        <!-- Chat messages -->
+
+        
+        
+        
+        <!-- Add more chat messages here -->
+        
+        <div class="flex-grow-1"></div> <!-- Spacer, pushes the input to the bottom -->
+      </div>
+      
+     
+        <div class="p-3">
+          <form method="post" action="/send_message/<%- receiverID %>">
+            <div class="user-input d-flex align-items-center">
+
+              
+              <input type="text" class="form-control" name="message" placeholder="Type your message..." />
+              <button type="submit" class="btn btn-primary ml-2">Send</button>
+             
+
+            </div>
+          </form>
+        </div>
+      
+    </div>
+    
+
+  
+  
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+
+</html>

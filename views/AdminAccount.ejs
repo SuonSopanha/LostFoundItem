@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminAccount</title>
+  <!--CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style/AdminAccount.css">
+
+  <!--font body-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Rashi+Hebrew:wght@500&display=swap" rel="stylesheet">   
+
+  <!--Navbar font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+
+  <!--font on slide h1-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light "style="background-color:#DEE8EB; max-width: 100%;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img src="../Img/logo.jpg" alt="logo" style="margin-left: 10%;width: 230px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active"  href="#" style="width:160px; text-align: center;">About&nbsp;Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  href="/foundItemPage" style="width:160px; text-align: center;">Found</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  href="/lostItemPage" style="width:160px; text-align: center;">Lost</a>
+        </li>
+        <% if (isAuth) { %>
+          <!-- Show the authenticated navigation item -->
+          <li class="nav-item">
+            <a class="nav-link active" href="/Profile" style="width: 160px; text-align: center;">
+              <span class="bi bi-person-fill" style="display: block; font-size: 1.5rem; margin: 0 auto;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" style="display: block; width: 42px; height: 42px; margin: 0 auto;">
+                  <path d="M248 288c61.9 0 112-50.1 112-112s-50.1-112-112-112-112 50.1-112 112 50.1 112 112 112zm0 32c-71.9 0-208 36.4-208 112v16h416v-16c0-75.6-136.1-112-208-112z" fill="#219882"/>
+                </svg>
+              </span>
+            </a>
+          </li>
+        <% } else { %>
+          <!-- Show the unauthenticated navigation item -->
+          <li class="nav-item">
+            <a class="nav-link active" href="/signInPage" style="width:160px; text-align: center;">Sign&nbsp;In</a>
+          </li>
+        <% } %>
+    </div>
+  </div>
+</nav>
+<!--End Navbar-->
+
+  
+
+   <!--Item info-->
+ 
+   <div class="row " style="display: flex;max-width: 100%;" >
+    <div class="col-sm-3" style="background-color: #1A937E;">
+      <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto ">
+        <img src="../Img/profileNav.png" style="width: 60%; display: block;margin-left: auto;margin-right: auto;margin-top: 10%">
+      </div>
+      <div class="username fw-bold" style="text-align: center;color: aliceblue;font-size: 25px;margin-top: 10%;margin-bottom: 10%;">
+        <p>Admin</p>
+      </div>
+      <a href="/admin/overview" style="text-decoration: none;">
+        <div class="btn fw-bold" id="changename" style="font-size: 25px;width:100%;height: auto;background-color:transparent;color: rgb(255, 255, 255);margin-top: 10%;margin-left: 1.25%;text-align: left;background-color: transparent;">
+          Overview
+        </div>
+      </a>
+      <a href="/admin/account" style="text-decoration: none;">
+        <div class="btn fw-bold" id="changename" style="font-size: 25px;width:100%;height: auto;background-color:#0E3E35;color: rgb(255, 255, 255);margin-left: 1.25%;text-align: left;margin-top: 1%;">
+          User
+        </div>
+      </a>
+      <a href="/admin/report" style="text-decoration: none;">
+        <div class="btn fw-bold" id="changename" style="font-size: 25px;width:100%;height: auto;background-color: transparent;color: rgb(255, 255, 255);margin-left: 1.25%;text-align: left;background-color: #0E3E35;margin-top: 1%;">
+          Item Report
+        </div>
+      </a>
+      <a href="/logout" style="text-decoration: none;">
+        <div class="btn fw-bold" id="changename" style="display: block;margin-left: auto;text-align: left;margin-right: auto;font-size: 25px;width:60%;height: auto;background-color: aliceblue;color: rgb(6, 78, 54);margin-top: 10%;margin-bottom: 10%;text-align: center;">
+          Log out
+        </div>
+      </a>
+
+      
+    </div>
+
+
+    <div class="col-sm-9" style="padding-left: 5%;">
+      <div id="YourPost" class="fw-bold" style="color: aliceblue;font-size: 50px;margin-top: 2%;">Overview</div>
+      <div class="btn fw-bold bg-transparent " id="number" style="font-size: 25px;width:100%;height: auto;background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);margin-top: 1%;">
+        <div class="row" >
+
+          <div class="col-sm-3" style="background-color: #075DDC;height: auto;width: 20%;margin-right: 2%;border-radius: 15px;color:black;">
+            <a href="#" style="text-decoration: none;color: aliceblue;">
+              <div class="row">
+                <div class="col-sm-6" style="text-align: center; justify-content: center;margin-top: 2%;">
+                  <img src="../Img/profile.png" style="width: 50%;">
+                  <p style="display: block;">User</p>
+                </div>
+                <div class="col-sm-6" style="display: block; text-align: center; justify-content: center;margin-top: 12%;">
+                  <p style="text-align: center;"><%- userCount %></p>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <div class="col-sm-3" style="background-color: #F87A34;height: auto;width: 20%;margin-right: 2%;border-radius: 15px;color:black;">
+            <a href="#" style="text-decoration: none;color: aliceblue;">
+              <div class="row">
+                <div class="col-sm-6" style="text-align: center; justify-content: center;margin-top: 2%;">
+                  <img src="../Img/box.png" style="width: 50%;">
+                  <p style="display: block;">Item</p>
+                </div>
+                <div class="col-sm-6" style="display: block; text-align: center; justify-content: center;margin-top: 12%;">
+                  <p style="text-align: center;"><%- itemCount %></p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-3" style="background-color: #1A937E;height: auto;width: 20%;margin-right: 2%;border-radius: 15px;color:black;">
+            <a href="#" style="text-decoration: none;color: aliceblue;">
+              <div class="row">
+                <div class="col-sm-6" style="text-align: center; justify-content: center;margin-top: 2%;">
+                  <img src="../Img/found.png" style="width: 50%;">
+                  <p style="display: block;">Found</p>
+                </div>
+                <div class="col-sm-6" style="display: block; text-align: center; justify-content: center;margin-top: 12%;">
+                  <p style="text-align: center;"><%- foundCount %></p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-3" style="background-color: #C60505;height: auto;width: 20%;margin-right: 2%;border-radius: 15px;color:black;">
+            <a href="#" style="text-decoration: none;color: aliceblue;">
+              <div class="row">
+                <div class="col-sm-6" style="text-align: center; justify-content: center;margin-top: 2%;">
+                  <img src="../Img/location.png" style="width: 50%;">
+                  <p style="display: block;">Missed</p>
+                </div>
+                <div class="col-sm-6" style="display: block; text-align: center; justify-content: center;margin-top: 12%;">
+                  <p style="text-align: center;"><%- lostCount %></p>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+        </div> 
+      </div>
+
+      
+
+      <div class="row" style="width: 90%; margin-top: 5%;">
+        <div class="col-sm-3" style="color: white;font-size: 35px;">
+          <div class="fw-bold">User&nbsp;account</div>
+        </div>
+        <div class="col-sm-3" >
+        </div>
+        <div class="col-sm-3" >
+        </div>
+        <div class="col-sm-3" >
+        </div>
+      </div>
+
+      <div class="search" style="margin-top: 2%;margin-bottom: 2%;">
+        <div class="row">
+          <div class="col-sm-6" style="height: auto; font-size: 25px;">
+           <input class="fw-bold " type="text" style="width: 100%;border-radius: 10px;text-align: center;height: 100%;">
+          </div>  
+          <div class="col-sm-2" >
+            <div class="btn bg-gradient" style="width: 85%;height: 100%;font-size: 25px;text-align:center;" id="searchBtn"><a href="#" style="text-decoration: none ;"><h5 style="color: aliceblue;font-size: 25px;font-weight: bold; overflow: hidden;">Search</h5></a></div>
+          </div>
+        </div> 
+      </div>
+
+      
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light " style="margin-top:1% ;width: 90%;border-radius: 15px;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" id="Goo" style="font-weight: bold;font-size: 1.5vw; white-space: nowrap; width: 16vw; overflow: hidden;">UserName</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll" >
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;" >
+              <li class="nav-item" >
+                <a class="nav-link active " aria-current="page" id="look" style="font-size: 1.5vw; width: 18vw; white-space: nowrap; overflow: hidden;">Email</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" id="look" style="font-size: 1.5vw; width: 12vw; white-space: nowrap; overflow: hidden;">Report</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><img src="../Img/trash.png" style="width: 2vw;"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+      <% if (data != null && data.length > 0) { %>
+        <% for (var i = 0; i < data.length; i++) { %>
+          
+          <nav class="navbar navbar-expand-lg navbar-light bg-light " style="margin-top:1% ;width: 90%;border-radius: 15px;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#" id="Goo" style="font-weight: bold;font-size: 1.5vw; white-space: nowrap; width: 16vw; overflow: hidden;"><%- data[i].name %></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll" >
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;" >
+                  <li class="nav-item" >
+                    <a class="nav-link active " aria-current="page" id="look" style="font-size: 1.5vw; width: 18vw; white-space: nowrap; overflow: hidden;"><%- data[i].email %></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" id="look" style="font-size: 1.5vw; width: 12vw; white-space: nowrap; overflow: hidden;">&nbsp;&nbsp;&nbsp;&nbsp;<%- reportCount[i] %></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"><img src="../Img/trash.png" style="width: 2vw;"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>    
+        <% } %>
+        
+        <nav aria-label="Page navigation">
+          <ul class="pagination justify-content-center mt-2">
+            <li class="page-item <%= currentPage === 1 ? 'disabled' : '' %>">
+              <a class="page-link" href="?page=<%= currentPage - 1 %>" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            <% for (var i = 1; i <= totalPages; i++) { %>
+            <li class="page-item <%= currentPage === i ? 'active' : '' %>">
+              <a class="page-link" href="?page=<%= i %>"><%= i %></a>
+            </li>
+            <% } %>
+            <li class="page-item <%= currentPage === totalPages ? 'disabled' : '' %>">
+              <a class="page-link" href="?page=<%= currentPage + 1 %>">Next</a>
+            </li>
+          </ul>
+        </nav>
+    
+      <% } else { %>
+        <h1>No items found</h1>
+      <% } %>
+      
+
+
+      
+    </div>
+  </div>
+  
+  
+     
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+
+</html>

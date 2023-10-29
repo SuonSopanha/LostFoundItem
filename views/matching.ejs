@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Found</title>
+  <!--CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style/forthpagestyle.css">
+
+  <!--font body-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Rashi+Hebrew:wght@500&display=swap" rel="stylesheet">   
+
+  <!--Navbar font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+
+  <!--font on slide h1-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light "style="background-color:#DEE8EB;; max-width: 100%;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="../Img/logo.jpg" alt="logo" style="margin-left: 10%;width: 230px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/" style="width:160px; text-align: center;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  href="about-us" style="width:160px; text-align: center;">About&nbsp;Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  href="/foundItemPage" style="width:160px; text-align: center;">Found</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  href="/lostItemPage" style="width:160px; text-align: center;">Lost</a>
+          </li>
+          <% if (isAuth) { %>
+            <!-- Show the authenticated navigation item -->
+            <li class="nav-item">
+              <a class="nav-link active" href="#" style="width: 160px; text-align: center;">
+                <span class="bi bi-person-fill" style="display: block; font-size: 1.5rem; margin: 0 auto;">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" style="display: block; width: 42px; height: 42px; margin: 0 auto;">
+                    <path d="M248 288c61.9 0 112-50.1 112-112s-50.1-112-112-112-112 50.1-112 112 50.1 112 112 112zm0 32c-71.9 0-208 36.4-208 112v16h416v-16c0-75.6-136.1-112-208-112z" fill="#219882"/>
+                  </svg>
+                </span>
+              </a>
+            </li>
+          <% } else { %>
+            <!-- Show the unauthenticated navigation item -->
+            <li class="nav-item">
+              <a class="nav-link active" href="/signInPage" style="width:160px; text-align: center;">Sign&nbsp;In</a>
+            </li>
+          <% } %>
+      </div>
+    </div>
+  </nav>
+  <!--End Navbar-->
+
+  <!--slider-->
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="max-width: 100%;">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+      <!--store all img-->
+      <div class="carousel-inner" style="font-family: 'MuseoModerno', cursive;">
+        <!--first slide img-->
+        <div class="carousel-item active" >
+          <img src="../Img/home1.jpg" class="d-block img-fluid" alt="..."
+          style="width: 100%;">
+          <div class="carousel-caption " >
+            <h1 >Find your properties here</h1>
+            <h4 >The pllace where you can find it online</h4>
+            <a href="#" class="btn mt-2" id="btns" style="background-color: #DEE8EB; color: black; font-family: 'Play', sans-serif;font-size: 22px;">Make a post</a>
+          </div>
+        </div>
+        <!--second slide img-->
+        <div class="carousel-item">
+          <img src="../Img/home2.jpg" class="d-block img-fluid" alt="..."
+          style="width: 100%;">
+          <div class="carousel-caption">
+            <h1 >Find your properties here</h1>
+            <h4>The place where you can find it online</h4>
+            <a href="#" class="btn mt-2" id="btns" style="background-color: #DEE8EB; color: black; font-family: 'Play', sans-serif;font-size: 22px;">Make a post</a>
+          </div>
+        </div>
+        <!--third slide img-->
+        <div class="carousel-item">
+          <img src="../Img/home3.jpg" class="d-block img-fluid" alt="..."
+          style="width: 100%;">
+          <div class="carousel-caption">
+            <h1 >Find your properties here</h1>
+            <h4>The place where you can find it online</h4>
+            <a href="#" class="btn mt-2" id="btns" style="background-color: #DEE8EB; color: black; font-family: 'Play', sans-serif;font-size: 22px;">Make a post</a>
+          </div>
+        </div>
+
+        <!--fourth slide img-->
+        <div class="carousel-item">
+          <img src="../Img/home4.jpg" class="d-block img-fluid" alt="..."
+          style="width: 100%;">
+          <div class="carousel-caption">
+            <h1 >Find your properties here</h1>
+            <h4>The place where you can find it online</h4>
+            <a href="#" class="btn mt-2" id="btns" style="background-color: #DEE8EB; color: black; font-family: 'Play', sans-serif;font-size: 22px;">Make a post</a>
+          </div>
+        </div>
+      </div>
+      <!--end store-->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  <!--End slider-->
+
+   <!--Item info-->
+
+
+
+  <div class="card mb-3" style="max-width: 800px;display: block;margin-left: auto;margin-right: auto;margin-top: 2%;margin-bottom: 2%;border: none;">
+    <h1 style="font-weight: bold;">Potentail Matching</h1>
+  </div>
+
+
+  <% if (userData != null) { %>
+    <% for (var i = 0; i < userData.length; i++) { %>
+      <div class="card mt-5 mb-0" style="max-width: 800px;display: block;margin-left: auto;margin-right: auto;margin-top: 2%;margin-bottom: 2%;border: none;">
+       
+        <div class="card bg-alert-subtle">
+          <div class="card-body bg-success-subtle">
+            <h3 style="font-weight: bold;" ><%- userData[i].itemName %></h3>
+          </div>
+        </div>
+      </div>
+      <% if (data[i] != null && data[i].length > 0) { %>
+        <% for (var j = 0; j < data[i].length; j++) { %>
+          <div class="card mb-3" style="max-width:800px;display: block;margin-left: auto;margin-right: auto;margin-top: 2%;margin-bottom: 2%;background-color: #ade1be;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="<%- data[i][j].image %>" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body" style="color: black;margin-left: 15%;">
+                  <h1 class="card-title mb-1" style="font-weight: bold;"><%- data[i][j].itemName %></h1>
+                  <h5 class="m-0">Category : <%- data[i][j].category %></h5>
+                  <h5 class="m-0">Color : <%- data[i][j].color %></h5>
+                  <h5 class="m-0">Location : <%- data[i][j].location %></h5>
+                  <a href="/itemDetail/<%- data[i][j]._id %>" target="_blank" class="btn mt-3" style="font-size: 22px;border-radius: 10px;width: auto;height: auto;text-align: center;">See more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+        <% } %>
+        
+      <% } else { %>
+        <div class="card" style="max-width: 800px;display: block;margin-left: auto;margin-right: auto;margin-top: 2%;margin-bottom: 2%;border: none;">
+          <div class="card bg-danger-subtle">
+            <div class="card-body">No Potentail Matching Item Found</div>
+          </div>
+        </div>
+      <% } %>
+    <% } %>
+  <% } else { %>
+    <div class="card" style="max-width: 800px;display: block;margin-left: auto;margin-right: auto;margin-top: 2%;margin-bottom: 2%;border: none;">
+      <div class="card bg-danger-subtle">
+        <div class="card-body">No User Item Found</div>
+      </div>
+    </div>
+  <% } %>
+  
+<!--End Owner info-->
+  
+  
+     
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-black " style="color: #ffffff;margin-top: 0;max-width: 100%;">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block" style="font-size: 25px;">
+      <span>Get connected with us on social networks:</span>
+    </div>
+ 
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h3 class="text-uppercase fw-bold mb-4">
+            LOST AND FOUND
+          </h3>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4" id="navFooter" >
+         
+          <p>
+            <a  href="#" id="navFooter1" class="nav-link active"  style="font-family: 'Sans', sans-serif;font-weight: bold;font-size: 22px;">Home</a>
+          </p>
+          <p>
+            <a  href="#" id="navFooter2" class="nav-link active"  style="font-family: 'Sans', sans-serif;font-weight: bold;font-size: 22px;">About&nbsp;Us</a>
+          </p>
+          <p>
+            <a  href="#" id="navFooter3" class="nav-link active"  style="font-family: 'Sans', sans-serif;font-weight: bold;font-size: 22px;">Lost</a>
+          </p>
+          <p>
+            <a  href="#" id="navFooter4" class="nav-link active"  style="font-family: 'Sans', sans-serif;font-weight: bold;font-size: 22px;">Found</a>
+          </p>
+        </div>
+        <!-- Grid column --> 
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h3 class="text-uppercase fw-bold mb-4">Contact Us</h3>
+          <p class="text-uppercase mb-4" style="font-size: 20px;">Phnom Penh, Cambodia</p>
+          <p style="font-size: 20px;">Royal University of Phnom Penh</p>
+          <p style="font-size: 20px;">
+            LOSTANDFOUND@gmail.com
+          </p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+</footer>
+<!-- Footer --> 
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminitemReport</title>
+  <!--CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="AdminitemReportstyle.css">
+
+  <!--font body-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Rashi+Hebrew:wght@500&display=swap" rel="stylesheet">   
+
+  <!--Navbar font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+
+  <!--font on slide h1-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light "style="background-color:#DEE8EB; max-width: 100%;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../Img/logo.jpg" alt="logo" style="margin-left: 10%;width: 230px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active"  href="#" style="width:160px; text-align: center;">About&nbsp;Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  href="#" style="width:160px; text-align: center;">Found</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  href="#" style="width:160px; text-align: center;">Lost</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  href="#" style="width:160px; text-align: center;"><img src="../Img/profileNav.png" style="display: block;width: 42px;display: block;margin-left: auto;margin-right: auto;"></a>
+        </li>
+    </div>
+  </div>
+</nav>
+<!--End Navbar-->
+
+  
+
+   <!--Item info-->
+
+  <div class="row " style="display: flex;max-width: 100%;" >
+    <div class="col-sm-3" style="background-color: #1A937E;">
+      <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto ">
+        <img src="../Img/profileNav.png" style="width: 60%; display: block;margin-left: auto;margin-right: auto;margin-top: 10%">
+      </div>
+      <div class="username fw-bold" style="text-align: center;color: aliceblue;font-size: 25px;margin-top: 10%;margin-bottom: 10%;">
+        <p>Admin</p>
+      </div>
+      <div class="btn fw-bold" id="changename" style="font-size: 25px;width:100%;height: auto;background-color:transparent;color: rgb(255, 255, 255);margin-top: 10%;margin-left: 1.25%;text-align: left;background-color: #0E3E35;">
+        Overview
+      </div>
+      <div class="btn fw-bold" id="changename" style="font-size: 25px;width:100%;height: auto;background-color: transparent;color: rgb(255, 255, 255);margin-left: 1.25%;text-align: left;margin-top: 1%;">
+        User
+      </div>
+      <div class="btn fw-bold" id="changename" style="font-size: 25px;width:100%;height: auto;background-color: transparent;color: rgb(255, 255, 255);margin-left: 1.25%;text-align: left;background-color: #0E3E35;margin-top: 1%;">
+        Item Report
+      </div>
+      <div class="btn fw-bold" id="changename" style="display: block;margin-left: auto;text-align: left;margin-right: auto;font-size: 25px;width:60%;height: auto;background-color: aliceblue;color: rgb(6, 78, 54);margin-top: 10%;margin-bottom: 10%;text-align: center;">
+        Log out
+      </div>
+      
+      
+    </div>
+
+
+    <div class="col-sm-9" style="padding-left: 5%;">
+      <div id="YourPost" class="fw-bold" style="color: aliceblue;font-size: 50px;margin-top: 2%;">Overview</div>
+      <div class="btn fw-bold bg-transparent " id="number" style="font-size: 25px;width:100%;height: auto;background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);margin-top: 1%;">
+        <div class="row" >
+          <div class="col-sm-3" style="background-color: #075DDC;height: auto;width: 20%;margin-right: 2%;border-radius: 15px;color:black;">
+            <a href="#" style="text-decoration: none;color: aliceblue;">
+              <div class="row">
+                <div class="col-sm-6" style="text-align: center; justify-content: center;margin-top: 2%;">
+                  <img src="../Img/profile.png" style="width: 50%;">
+                  <p style="display: block;">User</p>
+                </div>
+                <div class="col-sm-6" style="display: block; text-align: center; justify-content: center;margin-top: 12%;">
+                  <p style="text-align: center;">256</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <div class="col-sm-3" style="background-color: #F87A34;height: auto;width: 20%;margin-right: 2%;border-radius: 15px;color:black;">
+            <a href="#" style="text-decoration: none;color: aliceblue;">
+              <div class="row">
+                <div class="col-sm-6" style="text-align: center; justify-content: center;margin-top: 2%;">
+                  <img src="../Img/box.png" style="width: 50%;">
+                  <p style="display: block;">Item</p>
+                </div>
+                <div class="col-sm-6" style="display: block; text-align: center; justify-content: center;margin-top: 12%;">
+                  <p style="text-align: center;">256</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-3" style="background-color: #1A937E;height: auto;width: 20%;margin-right: 2%;border-radius: 15px;color:black;">
+            <a href="#" style="text-decoration: none;color: aliceblue;">
+              <div class="row">
+                <div class="col-sm-6" style="text-align: center; justify-content: center;margin-top: 2%;">
+                  <img src="../Img/found.png" style="width: 50%;">
+                  <p style="display: block;">Found</p>
+                </div>
+                <div class="col-sm-6" style="display: block; text-align: center; justify-content: center;margin-top: 12%;">
+                  <p style="text-align: center;">256</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-3" style="background-color: #C60505;height: auto;width: 20%;margin-right: 2%;border-radius: 15px;color:black;">
+            <a href="#" style="text-decoration: none;color: aliceblue;">
+              <div class="row">
+                <div class="col-sm-6" style="text-align: center; justify-content: center;margin-top: 2%;">
+                  <img src="../Img/location.png" style="width: 50%;">
+                  <p style="display: block;">Missed</p>
+                </div>
+                <div class="col-sm-6" style="display: block; text-align: center; justify-content: center;margin-top: 12%;">
+                  <p style="text-align: center;">256</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+        </div> 
+      </div>
+
+      
+
+      <div class="row" style="width: 90%; margin-top: 5%;">
+        <div class="col-sm-3" style="color: white;font-size: 30px;">
+          <div class="fw-bold">Item Report</div>
+        </div>
+        <div class="col-sm-3" >
+        </div>
+        <div class="col-sm-3" style="color: white;font-size: 30px;text-align: right;">
+          <div class="fw-bold">Cartegory</div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <select class="form-select fw-bold " aria-label="Default select example" style="font-size: 22px;">
+              <option selected >Electronic</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div> 
+        </div>
+      </div>
+
+      <div class="search" style="margin-top: 2%;margin-bottom: 2%;">
+        <div class="row">
+          <div class="col-sm-6" style="height: auto; font-size: 25px;">
+           <input class="fw-bold " type="text" style="width: 85%;border-radius: 10px;text-align: center;height: 100%;">
+          </div>  
+          <div class="col-sm-2" >
+            <div class="btn bg-gradient" style="width: 85%;height: 100%;font-size: 25px;text-align:center;" id="searchBtn"><a href="#" style="text-decoration: none ;"><h5 style="color: aliceblue;font-size: 25px;font-weight: bold;">Search</h5></a></div>
+          </div>
+        </div> 
+      </div>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-top:2% ;width: 90%;border-radius: 15px;height: auto;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" id="Goo" style="font-weight: bold;font-size: 25px;">UserName</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll" >
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;" >
+              <li class="nav-item" >
+                <a class="nav-link active " aria-current="page" id="look" >ItemName</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" id="look">Category</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" id="look">PostDate</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><img src="../Img/pencil.png" style="width: 40px"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><img src="../Img/trash.png" style="width: 40px"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-top:2% ;width: 90%;border-radius: 15px;height: auto;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" id="Goo" style="font-weight: bold;font-size: 25px;">UserName</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll" >
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;" >
+              <li class="nav-item" >
+                <a class="nav-link active " aria-current="page" id="look" >ItemName</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" id="look">Category</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" id="look">PostDate</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><img src="../Img/pencil.png" style="width: 40px"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><img src="../Img/trash.png" style="width: 40px"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-top:2% ;width: 90%;border-radius: 15px;height: auto;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" id="Goo" style="font-weight: bold;font-size: 25px;">UserName</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll" >
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;" >
+              <li class="nav-item" >
+                <a class="nav-link active " aria-current="page" id="look" >ItemName</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" id="look">Category</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" id="look">PostDate</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><img src="../Img/pencil.png" style="width: 40px"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><img src="../Img/trash.png" style="width: 40px"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-top:2% ;width: 90%;border-radius: 15px;height: auto;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" id="Goo" style="font-weight: bold;font-size: 25px;">UserName</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll" >
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;" >
+              <li class="nav-item" >
+                <a class="nav-link active " aria-current="page" id="look" >ItemName</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" id="look">Category</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" id="look">PostDate</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><img src="../Img/pencil.png" style="width: 40px"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><img src="../Img/trash.png" style="width: 40px"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-top:2% ;width: 90%;border-radius: 15px;height: auto;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" id="Goo" style="font-weight: bold;font-size: 25px;">UserName</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll" >
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;" >
+              <li class="nav-item" >
+                <a class="nav-link active " aria-current="page" id="look" >ItemName</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" id="look">Category</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" id="look">PostDate</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><img src="../Img/pencil.png" style="width: 40px"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><img src="../Img/trash.png" style="width: 40px"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      
+    </div>
+  </div>
+  
+  
+     
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:  rgb(255, 255, 255);
+}
+ 
+/*nav style*/
+.navbar-brand{
+   width: 70%;
+   height:auto;
+   position: relative;
+   overflow: hidden;
+   margin-top: 0;
+   padding-top: 0;
+}
+
+/* text on navbar*/
+.collapse ul li a{
+    font-family: 'Sans', sans-serif;
+    color:  #219882 !important ;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 30px;
+    padding: 10px 12px;
+    border-radius: 6px;
+}
+
+.collapse ul li a:hover{
+   background-color: #219882;
+    color: rgb(255, 255, 255) !important; 
+}
+
+
+.navbar-toggler{
+    background-color: rgb(186, 186, 186);
+    font-size: 20px;
+}
+
+
+.btn:hover{
+    background: rgba(92, 107, 111, 0.4)!important;
+    color: rgb(0, 0, 0) !important;
+    
+}
+.btn{
+    background-color:#219882;
+    color: white;
+}
+
+#btns:hover{
+    background-color:#aba9a9!important;
+    color: rgb(0, 0, 0) !important;
+}
+/*End*/
+
+
+/*footer style*/
+#navFooter1:hover{
+    color:  #0dd0ac !important;
+}
+#navFooter2:hover{
+    color:  #0dd0ac !important;
+}
+#navFooter3:hover{
+    color:  #0dd0ac !important;
+}
+#navFooter4:hover{
+    color:  #0dd0ac !important;
+}
+
+.page-link {
+    background-color: #219882;
+    border-color: #219882;
+    color: #fff;
+  }
+  
+  .page-link:hover {
+    background-color: #176e61;
+    border-color: #176e61;
+    color: white;
+  }
+  
+  .page-item.active .page-link {
+    background-color: #176e61;
+    border-color: #176e61;
+  }
+  
+  .page-item.disabled .page-link {
+    color: #999;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #ddd;
+  }
+
+
+/*End*/

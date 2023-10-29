@@ -1,0 +1,36 @@
+<!-- Define a search form using Bootstrap -->
+<form class="form-inline" action="/search" method="get">
+  <div class="form-group">
+    <input type="text" class="form-control" name="search" placeholder="Search...">
+  </div>
+  <div id="category-carousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <button type="submit" class="btn btn-secondary" name="category" value="clothing">Clothing</button>
+        <button type="submit" class="btn btn-secondary" name="category" value="collection item">Collection Item</button>
+        <button type="submit" class="btn btn-secondary" name="category" value="document">Document</button>
+        <button type="submit" class="btn btn-secondary" name="category" value="household">Household</button>
+      </div>
+      <div class="carousel-item">
+        <button type="submit" class="btn btn-secondary" name="category" value="tools">Tools</button>
+        <button type="submit" class="btn btn-secondary" name="category" value="jewelry">Jewelry</button>
+        <button type="submit" class="btn btn-secondary" name="category" value="mail">Mail</button>
+        <button type="submit" class="btn btn-secondary" name="category" value="ticket">Ticket</button>
+      </div>
+      <div class="carousel-item">
+        <button type="submit" class="btn btn-secondary" name="category" value="personal accesories">Personal Accesories</button>
+        <button type="submit" class="btn btn-secondary" name="category" value="electronic">Electronic</button>
+        <button type="submit" class="btn btn-secondary" name="category" value="other">Other</button>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#category-carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#category-carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <button type="submit" class="btn btn-primary">Search</button>
+</form>

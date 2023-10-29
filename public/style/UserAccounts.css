@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url('../Img/home3.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: max-content;
+}
+ 
+/*nav style*/
+.navbar-brand{
+   width: 70%;
+   height:auto;
+   position: relative;
+   overflow: hidden;
+   margin-top: 0;
+   padding-top: 0;
+}
+
+/* text on navbar*/
+.collapse ul li a{
+    font-family: 'Sans', sans-serif;
+    color:  #219882 !important ;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 30px;
+    padding: 10px 12px;
+    border-radius: 6px;
+}
+
+.collapse ul li a:hover{
+   background-color: #219882;
+    color: rgb(255, 255, 255) !important; 
+}
+
+.navbar-toggler{
+    background-color: rgb(186, 186, 186);
+    font-size: 20px;
+}
+
+
+.btn:hover{
+    background: rgba(92, 107, 111, 0.4)!important;
+    color: rgb(0, 0, 0) !important;
+    
+}
+.btn{
+    background-color:#219882;
+    color: white;
+}
+
+#btns:hover{
+    background-color:#aba9a9!important;
+    color: rgb(0, 0, 0) !important;
+}
+#changename:hover{
+    background-color: #000000 !important;
+    color: #219882 !important;
+}
+#founditem:hover{
+    background-color: #76ff2c !important;
+    color: #000000 !important;
+}
+#item:hover{
+    background-color: rgb(255, 255, 255) !important;
+    color: #000000 !important;
+}
+#logout:hover{
+    background-color:yellowgreen !important;
+}
+#Seachbar:hover{
+    background-color:transparent !important;
+}
+#selection:hover{
+    background-color:transparent !important;
+    color: white !important;
+}
+#searchBtn:hover{
+    background-color:red !important;
+    color: black !important;
+}
+
+#look:hover{
+    background-color: transparent !important;
+    color: #219882 !important;
+}
+#Goo:hover{
+    color: red !important;
+}
+
+/*End*/
+
+
+/*footer style*/
+#navFooter1:hover{
+    color:  #0dd0ac !important;
+}
+#navFooter2:hover{
+    color:  #0dd0ac !important;
+}
+#navFooter3:hover{
+    color:  #0dd0ac !important;
+}
+#navFooter4:hover{
+    color:  #0dd0ac !important;
+}
+/*End*/

@@ -1,0 +1,52 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+.background-image{
+
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),url('../Img/home2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/*nav style*/
+.navbar-brand{
+   width: 70%;
+   height: auto;
+   position: relative;
+   overflow: hidden;
+   margin-top: 0;
+   padding-top: 0;
+}
+
+/* text on navbar*/
+.collapse ul li a{
+    font-family: 'Sans', sans-serif;
+    color:  #219882 !important ;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 30px;
+    padding: 10px 12px;
+    border-radius: 6px;
+}
+
+.collapse ul li a:hover{
+   background-color: #219882;
+    color: rgb(255, 255, 255) !important; 
+}
+
+.navbar-toggler{
+    background-color: rgb(186, 186, 186);
+    font-size: 20px;
+}
+
+#SignIn:hover{
+    background-color: #69bd4d !important;
+    color:black !important;
+}
+
+/*End*/

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title> 
+
+    <!--CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="thirdpagestyle.css">
+
+  <!--font body-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Rashi+Hebrew:wght@500&display=swap" rel="stylesheet">   
+
+  <!--Navbar font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+
+  <!--font on slide-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light "style="background-color:#DEE8EB;; max-width: 100%;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../Img/logo.jpg" alt="logo" style="margin-left: 10%;width: 230px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" style="width:160px; text-align: center;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  href="#" style="width:160px; text-align: center;">About&nbsp;Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  href="#" style="width:160px; text-align: center;">Found</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  href="#" style="width:160px; text-align: center;">Lost</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  href="#" style="width:160px; text-align: center;"><img src="../Img/profileNav.png" style="display: block;width: 42px;display: block;margin-left: auto;margin-right: auto;"></a>
+          </li>
+      </div>
+    </div>
+  </nav>
+  <!--End Navbar-->
+
+   <!--slider-->
+
+   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="max-width: 100%;">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <!--store all img-->
+    <div class="carousel-inner" style="font-family: 'MuseoModerno', cursive;">
+      <!--first slide img-->
+      <div class="carousel-item active" >
+        <img src="../Img/home1.jpg" class="d-block img-fluid" alt="..."
+        style="width: 100%;">
+        <div class="carousel-caption " >
+          <h1 >Searching for your item ?</h1>
+          <h4 >Maybe you can found it here</h4>
+        </div>
+      </div>
+      <!--second slide img-->
+      <div class="carousel-item">
+        <img src="../Img/home2.jpg" class="d-block img-fluid" alt="..."
+        style="width: 100%;">
+        <div class="carousel-caption">
+          <h1 >Searching for your item ?</h1>
+          <h4>Maybe you can found it here</h4>
+        </div>
+      </div>
+      <!--third slide img-->
+      <div class="carousel-item">
+        <img src="../Img/home3.jpg" class="d-block img-fluid" alt="..."
+        style="width: 100%;">
+        <div class="carousel-caption">
+          <h1 >Searching for your item ?</h1>
+          <h4>Maybe you can found it here</h4>
+        </div>
+      </div>
+
+      <!--fourth slide img-->
+      <div class="carousel-item">
+        <img src="../Img/home4.jpg" class="d-block img-fluid" alt="..."
+        style="width: 100%;">
+        <div class="carousel-caption">
+          <h1 >Searching for your item ?</h1>
+          <h4>Maybe you can found it here</h4>
+        </div>
+      </div>
+    </div>
+    <!--end store-->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+<!--End slider-->
+
+  <!--card-->
+  
+    <div class="container-fluid text-center" >
+      <div class="card-header"style="font-size:40px;font-family: 'Noto Rashi Hebrew', serif;Color:black">
+        Blu-ray DVD
+      </div>
+    </div>
+
+  <div class="container mb-4" style="max-width: 100%;">
+    <div class="row" style="max-width: 100%;">
+      <div class="col-md-4"style="text-align:center;margin-top:30px">
+        <img src="../Img/blu-radDVD.jpg" alt="..."style="display: block;margin-left: auto;margin-right: auto;margin-bottom:20px;width: 300px;height:300px;">
+      </div>
+
+      <div class="col-md-8" style="max-width: 100%;">
+        <div clas="container-body"style="margin-top:5%;font-size:22px;margin-bottom:100px;font-family: 'Noto Rashi Hebrew', serif;margin-left:30%">
+          <p class="card-title">Category : Electronic</p>
+          <p class="card-title">Color : White</p>
+          <p class="card-title">Secondary Color : Blue</p>
+          <p class="card-title">Size : Small</p>
+          <p class="card-title">Date lost : 03/01/2023</p>
+          <p class="card-title">Time lost : Uncertain</p>
+          <p class="card-title">Location lost : Phsar Thmey</p>
+        </div> 
+      </div>
+    </div>
+  </div>
+
+<!--Desrcibe-->
+  <div class="container " style="background-color:#DEE8EB;padding-bottom: 3%;padding-top: 3%;max-width: 100%;">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card-title"style="font-size:30px;font-family: 'Fira Sans Condensed', sans-serif;margin-left:5%;font-weight:bold">Location</div>
+        <img src="../Img/home3.jpg"  style="margin-left:5% ;margin-right:5% ;margin-top:1%;width: 70%">
+      </div>
+      <div class="col-md-6">
+        <div class="card-title"style="font-size:30px;font-family: 'Fira Sans Condensed', sans-serif;margin-left:5%;font-weight:bold">Description</div>
+        <div class="card-body" style="margin-left:5% ;margin-right:5% ;margin-top:5%">
+          <p class="card-text"style="font-size:22px; font-family: 'Fira Sans Condensed', sans-serif;">Owner: I really looking for my blue-ray DVD that I accidently lost at Phsar Thmey, I hope if anyone who found it could return it back to me, because this DVD is really important to me. If you found it at anywhere you can contact via my email or my mobile phone that I list down below.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container text-center" style="max-width: 100%;">
+    <div style="font-size:40px;font-family: 'Noto Rashi Hebrew', serif;">
+     Owner Contact
+    </div>
+  </div>
+
+  <div class="conatainer mb-5" >
+    <div class="row" style="max-width: 100%;">
+      <div class="col-md-12" >
+        <div class="container-body"style="margin-top:10px;font-size:24px;font-family: 'Noto Rashi Hebrew', serif;margin-left:33%">
+          <p class="card-title">Name : Darita</p>
+          <p class="card-title">Email : darita.1236@gamil.com</p>
+          <p class="card-title">Tel : 012 36 69 93</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!--botton post-->
+   <div class="card-body"style="text-align:center;margin-bottom:50px;">
+    <a href="http://127.0.0.1:5500/FirstPage/Firstpage.html" class="btn text-light" role="button" style="width: 150px;font-size: 23px;font-family: 'Noto Rashi Hebrew', serif;background-color: #219882;color: aliceblue;margin-right: 2%;">Home</a>
+    <a href="#" class="btn text-light" role="button" style="width: 150px;font-size: 23px;font-family: 'Noto Rashi Hebrew', serif;background-color: #219882;color: aliceblue;margin-left: 2%;">Back</a>
+ </div>
+
+<!--end botton post-->
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-black " style="color: #ffffff;margin-top: 0;">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block" style="font-size: 25px;">
+      <span>Get connected with us on social networks:</span>
+    </div>
+ 
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h3 class="text-uppercase fw-bold mb-4">
+            LOST AND FOUND
+          </h3>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4" id="navFooter" >
+         
+          <p>
+            <a  href="#" id="navFooter1" class="nav-link active"  style="font-family: 'Sans', sans-serif;font-weight: bold;font-size: 22px;">Home</a>
+          </p>
+          <p>
+            <a  href="#" id="navFooter2" class="nav-link active"  style="font-family: 'Sans', sans-serif;font-weight: bold;font-size: 22px;">About&nbsp;Us</a>
+          </p>
+          <p>
+            <a  href="#" id="navFooter3" class="nav-link active"  style="font-family: 'Sans', sans-serif;font-weight: bold;font-size: 22px;">Lost</a>
+          </p>
+          <p>
+            <a  href="#" id="navFooter4" class="nav-link active"  style="font-family: 'Sans', sans-serif;font-weight: bold;font-size: 22px;">Found</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h3 class="text-uppercase fw-bold mb-4">Contact Us</h3>
+          <p class="text-uppercase mb-4" style="font-size: 20px;">Phnom Penh, Cambodia</p>
+          <p style="font-size: 20px;">Royal University of Phnom Penh</p>
+          <p style="font-size: 20px;">
+            LOSTANDFOUND@gmail.com
+          </p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+</footer>
+<!-- Footer -->
+
+</html>
